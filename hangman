@@ -1,0 +1,41 @@
+words = 'carrot'
+guess = 'r'
+count = 0
+attempted = []
+
+
+
+
+def Guess(g, w):
+        if w.find(g) != -1:
+            return True
+        else:
+            return False
+
+def Tries(g, w):
+    global count, words
+    if Guess(g, w) == False:
+
+        count += 1
+        attempted.append(g)
+        print('Incorrect, Guess again')
+        print('Attempted: ')
+        print(attempted)
+    elif Guess(g, w) == True:
+        words.replace(g,'')
+        print('correct, guess again? ')
+
+
+
+words = input("word, please don't peak :)  : ")
+
+
+
+
+while count < 6:
+    guess = input('Please input a one letter guess:  ')
+    Tries(guess, words)
+if not words:
+    print('you win!')
+else:
+    print('you lose!')
