@@ -1,5 +1,5 @@
-words = 'carrot'
-guess = 'r'
+words = ''
+guess = ''
 count = 0
 attempted = []
 
